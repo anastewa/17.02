@@ -7,21 +7,18 @@ function findword() {
     console.log(word2); // выводим результат
 }
 
-findword(); 
-
-function findwordTwo() {
-    const word3 = "temperature"; 
-    const words4 = word3.split(''); 
-    const words5 = words4.join('');
-    console.log(words5); 
+function findPalindrome2(word) {
+    word = word.toString();
+    const reversedWord = word.split('').reverse().join('');
+   if (word.toUpperCase() === reversedWord.toUpperCase()) {
+        console.log(word + '- это палиндром');
+    } else {
+        console.log(word + " - это не палиндром");
+    }
 }
-
-findwordTwo(); 
-
-function findwordPalindrome() {
-    const word6 = "nun"; 
-    const words7 = word6.split(''); 
-    const words5 = words7.join('');
-    console.log(words5); 
-}
-findwordPalindrome()
+//ghjdthrf
+findPalindrome2("temperature"); 
+findPalindrome2('radar');
+findPalindrome2('Mam');
+findPalindrome2(12321);
+findPalindrome2(123);
